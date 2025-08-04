@@ -11,4 +11,10 @@
   --grey-200: hsl(0, 0%, 86%);
   --grey-500: hsl(0, 1%, 44%);
   --black: hsl(0, 0%, 0%);
+
+  /* # TYPOGRAPHY # */
+  --ff-poppins: "Poppins", sans-serif;
+  --fw-400i: 400;
+  --fw-700: 700;
+  --fw-800i: 800;
 }
