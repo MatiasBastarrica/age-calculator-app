@@ -89,6 +89,7 @@ main {
 /* ### AGE CALCULATOR APP ### */
 
 .age-calculator {
+  max-width: 475px;
   background-color: var(--white);
   color: var(--black);
   border-radius: 1.4rem;
@@ -111,7 +112,7 @@ main {
 
 .age-calculator input {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.5rem 0.8rem;
   border: 1px solid var(--grey-200);
   border-radius: 0.4rem;
   color: var(--black);
@@ -142,8 +143,7 @@ main {
   padding: unset;
   margin-top: 1.5rem;
   margin-inline: auto;
-  /* position: relative;
-  z-index: 2; */
+  cursor: pointer;
 }
 
 .age-calculator form:before {
@@ -166,9 +166,49 @@ main {
   font-size: 3rem;
   font-weight: var(--fw-800i);
   font-style: italic;
+  line-height: 1.2;
 }
 
 .age-calculator__display p {
   display: flex;
   gap: 0.8rem;
+}
+
+/* ### MEDIA QUERIES ### */
+
+@media (min-width: 68.75em) {
+  .age-calculator {
+    max-width: 580px;
+    padding: 2.5rem 2.5rem 2rem;
+    border-radius: 1rem;
+    border-end-end-radius: 10rem;
+  }
+
+  .grid {
+    max-width: 70%;
+  }
+
+  .age-calculator input {
+    font-size: 1.275rem;
+  }
+
+  .age-calculator button {
+    margin-inline-end: 0;
+    width: 65px;
+    height: 65px;
+    margin-top: 0;
+  }
+
+  .age-calculator button img {
+    width: 50%;
+  }
+
+  .age-calculator form:before {
+    bottom: 21%;
+  }
+
+  .age-calculator__display {
+    margin-top: 0;
+    font-size: 4rem;
+  }
 }
