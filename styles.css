@@ -19,6 +19,34 @@
   --fw-800i: 800;
 }
 
+/* ### CSS RESET ### */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 /* # HIDE ARROWS FROM INPUT NUMBER # */
 
 /* Chrome, Safari, Edge, Opera */
