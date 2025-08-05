@@ -64,8 +64,6 @@ input[type="number"] {
 /* ### UTILITY CLASSES ### */
 
 .text-accent {
-  font-weight: var(--fw-800i);
-  font-style: italic;
   color: var(--purple-500);
 }
 
@@ -95,7 +93,7 @@ main {
   color: var(--black);
   border-radius: 1.4rem;
   border-end-end-radius: 5rem;
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem 2rem;
 }
 
 .age-calculator form {
@@ -108,7 +106,7 @@ main {
   font-weight: var(--fw-700);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 .age-calculator input {
@@ -161,4 +159,16 @@ main {
 
 .age-calculator button img {
   width: 45%;
+}
+
+.age-calculator__display {
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: var(--fw-800i);
+  font-style: italic;
+}
+
+.age-calculator__display p {
+  display: flex;
+  gap: 0.8rem;
 }
