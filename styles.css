@@ -67,8 +67,20 @@ input[type="number"] {
   color: var(--purple-500);
 }
 
+.text-error-accent {
+  color: var(--red-400);
+}
+
 .hide {
   display: hide;
+}
+
+.error-message {
+  font-size: 0.875rem;
+  color: var(--red-400);
+  font-style: italic;
+  font-weight: var(--fw-400i);
+  margin-top: 0.5rem;
 }
 
 /* ### GENERAL STYLING ### */
