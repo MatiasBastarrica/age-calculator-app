@@ -60,3 +60,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* ### UTILITY CLASSES ### */
+
+.text-accent {
+  font-weight: var(--fw-800i);
+  font-style: italic;
+  color: var(--purple-500);
+}
+
+.hide {
+  display: hide;
+}
