@@ -118,6 +118,18 @@ main {
   color: var(--black);
   font-weight: var(--fw-700);
   font-size: 1.135rem;
+  caret-color: var(--purple-500);
+}
+
+.age-calculator input:focus {
+  outline: 2px solid var(--purple-500);
+}
+
+.age-calculator input:hover,
+.age-calculator input:active {
+  border-color: var(--purple-500);
+
+  cursor: pointer;
 }
 
 .input-container {
@@ -144,6 +156,10 @@ main {
   margin-top: 1.5rem;
   margin-inline: auto;
   cursor: pointer;
+}
+
+.age-calculator button:hover {
+  background-color: var(--black);
 }
 
 .age-calculator form:before {
