@@ -79,3 +79,50 @@ body {
   font-family: var(--ff-poppins);
   background-color: var(--grey-100);
 }
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* ### AGE CALCULATOR APP ### */
+
+.age-calculator {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 1.4rem;
+  border-end-end-radius: 5rem;
+  padding: 3rem 1.5rem;
+}
+
+.age-calculator label {
+  color: var(--grey-500);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+}
+
+.age-calculator input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--grey-200);
+  border-radius: 0.4rem;
+  color: var(--black);
+  font-weight: var(--fw-700);
+  font-size: 1.235rem;
+}
+
+.input-container {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.age-calculator .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
