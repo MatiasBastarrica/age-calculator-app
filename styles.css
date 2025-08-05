@@ -72,3 +72,10 @@ input[type="number"] {
 .hide {
   display: hide;
 }
+
+/* ### GENERAL STYLING ### */
+
+body {
+  font-family: var(--ff-poppins);
+  background-color: var(--grey-100);
+}
