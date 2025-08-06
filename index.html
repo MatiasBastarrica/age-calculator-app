@@ -37,6 +37,7 @@
                   max="31"
                   required
                 />
+                <div class="error-message hide day-error"></div>
               </div>
               <div class="input-container">
                 <label for="month">Month</label
@@ -49,6 +50,7 @@
                   max="12"
                   required
                 />
+                <div class="error-message hide month-error"></div>
               </div>
               <div class="input-container">
                 <label for="year">Year</label
@@ -59,6 +61,7 @@
                   placeholder="YYYY"
                   required
                 />
+                <div class="error-message hide year-error"></div>
               </div>
             </div>
             <button>
@@ -67,9 +70,9 @@
           </form>
         </div>
         <div class="age-calculator__display">
-          <p><span class="text-accent">--</span>years</p>
-          <p><span class="text-accent">--</span>months</p>
-          <p><span class="text-accent">--</span>days</p>
+          <p><span class="text-accent years-display">--</span>years</p>
+          <p><span class="text-accent months-display">--</span>months</p>
+          <p><span class="text-accent days-display">--</span>days</p>
         </div>
       </article>
     </main>
