@@ -112,3 +112,14 @@ monthInput.addEventListener("input", () => {
     monthErrorMsg.classList.add("hide");
   }
 });
+
+yearInput.addEventListener("input", () => {
+  const yearErrorMsg = document.querySelector(".year-error");
+  const currentYear = currentDate.getFullYear();
+  if (yearInput.value > currentYear) {
+    yearErrorMsg.classList.remove("hide");
+    yearErrorMsg.textContent = "Must be in the past";
+  } else {
+    yearErrorMsg.classList.add("hide");
+  }
+});
