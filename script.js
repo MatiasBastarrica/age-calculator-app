@@ -19,6 +19,7 @@
 const dayInput = document.querySelector("input[name='day']");
 const monthInput = document.querySelector("input[name='month']");
 const yearInput = document.querySelector("input[name='year']");
+const form = document.querySelector("form");
 
 const yearsDisplay = document.querySelector(".years-display");
 const monthsDisplay = document.querySelector(".months-display");
