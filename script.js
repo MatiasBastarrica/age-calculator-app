@@ -19,6 +19,7 @@
 const dayInput = document.querySelector("input[name='day']");
 const monthInput = document.querySelector("input[name='month']");
 const yearInput = document.querySelector("input[name='year']");
+const inputs = document.querySelectorAll("input[type='number']");
 const form = document.querySelector("form");
 
 const yearsDisplay = document.querySelector(".years-display");
@@ -56,18 +57,6 @@ function getMaxDay(month) {
   }
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const dateSubmitted = {
-    day: dayInput.value,
-    month: monthInput.value,
-    year: yearInput.value,
-  };
-  calcYears(currentDate, dateSubmitted);
-  calcMonths(currentDate, dateSubmitted);
-  calcDays(currentDate, dateSubmitted);
-});
-
 const validDays = {
   28: "february",
   30: ["april", "june", "september", "november"],
@@ -88,3 +77,28 @@ const months = [
   "november",
   "december",
 ];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const dateSubmitted = {
+    day: dayInput.value,
+    month: monthInput.value,
+    year: yearInput.value,
+  };
+  calcYears(currentDate, dateSubmitted);
+  calcMonths(currentDate, dateSubmitted);
+  calcDays(currentDate, dateSubmitted);
+});
+
+inputs.forEach((input) => {
+  input.addEventListener("invalid", (e) => {
+    const errorMessages = document.querySelectorAll(".error-message");
+    e.preventDefault();
+    if (input.validity.valueMissing) {
+      errorMessages.forEach((errorMessage) => {
+        errorMessage.classList.remove("hide");
+        errorMessage.textContent = "This field is required";
+      });
+    }
+  });
+});
