@@ -16,6 +16,10 @@
 
 */
 
+const yearsDisplay = document.querySelector(".years-display");
+const monthsDisplay = document.querySelector(".months-display");
+const daysDisplay = document.querySelector(".days-display");
+
 let dateSubmitted;
 let currentDate;
 
