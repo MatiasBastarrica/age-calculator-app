@@ -103,6 +103,16 @@ inputs.forEach((input) => {
   });
 });
 
+dayInput.addEventListener("input", () => {
+  const daysErrorMsg = document.querySelector(".day-error");
+  if (dayInput.validity.rangeUnderflow || dayInput.validity.rangeOverflow) {
+    daysErrorMsg.classList.remove("hide");
+    daysErrorMsg.textContent = "Must be a valid day";
+  } else if (dayInput.validity.valid) {
+    daysErrorMsg.classList.add("hide");
+  }
+});
+
 monthInput.addEventListener("input", () => {
   const monthErrorMsg = document.querySelector(".month-error");
   if (monthInput.validity.rangeUnderflow || monthInput.validity.rangeOverflow) {
