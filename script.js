@@ -13,22 +13,34 @@ const currentDate = new Date();
 function calcYears(currentDate, dateSubmitted) {
   if (
     dateSubmitted.month - 1 === currentDate.getMonth() &&
-    dateSubmitted.day >= currentDate.getDate()
+    currentDate.getDate() >= dateSubmitted.day
   ) {
-    yearsDisplay.textContent = currentDate.getFullYear() - dateSubmitted.year;
+    // yearsDisplay.textContent = currentDate.getFullYear() - dateSubmitted.year;
+    return currentDate.getFullYear() - dateSubmitted.year;
   } else {
-    yearsDisplay.textContent =
-      currentDate.getFullYear() - dateSubmitted.year - 1;
+    // yearsDisplay.textContent =
+    // currentDate.getFullYear() - dateSubmitted.year - 1;
+    return currentDate.getFullYear() - dateSubmitted.year - 1;
   }
 }
 
-function calcMonths(currentDate, dateSubmitted) {
-  monthsDisplay.textContent =
-    12 - dateSubmitted.month + currentDate.getMonth() + 1;
+function calcMonths(currentDate, dateSubmitted, yearsToBeDisplayed) {
+  // monthsDisplay.textContent =
+  //   12 - dateSubmitted.month + currentDate.getMonth() + 1;
+  let monthsTotal = 12 - dateSubmitted.month + currentDate.getMonth() + 1;
+  if (monthsTotal > 12) {
+    yearsToBeDisplayed += 1;
+    return monthsTotal - 12;
+  } else {
+    return monthsTotal - 1;
+  }
 }
 
-function calcDays(currentDate) {
-  daysDisplay.textContent = currentDate.getDate();
+function calcDays(currentDate, dateSubmitted) {
+  // daysDisplay.textContent = currentDate.getDate();
+  const daysLeftOfTheMonth =
+    getMaxDay(months[dateSubmitted.month - 1]) - dateSubmitted.day;
+  return daysLeftOfTheMonth + currentDate.getDate();
 }
 
 function getMaxDay(month) {
@@ -95,9 +107,24 @@ form.addEventListener("submit", (e) => {
     daysErrorMsg.classList.remove("hide");
     daysErrorMsg.textContent = "Must be a valid date";
   } else {
-    calcYears(currentDate, dateSubmitted);
-    calcMonths(currentDate, dateSubmitted);
-    calcDays(currentDate, dateSubmitted);
+    let yearsToBeDisplayed;
+    let monthToBeDisplayed;
+    let daysToBeDisplayed;
+    // calcYears(currentDate, dateSubmitted);
+    // calcMonths(currentDate, dateSubmitted);
+    // calcDays(currentDate, dateSubmitted);
+
+    yearsToBeDisplayed = calcYears(currentDate, dateSubmitted);
+    monthToBeDisplayed = calcMonths(
+      currentDate,
+      dateSubmitted,
+      yearsToBeDisplayed
+    );
+    daysToBeDisplayed = calcDays(currentDate, dateSubmitted);
+
+    daysDisplay.textContent = daysToBeDisplayed;
+    monthsDisplay.textContent = monthToBeDisplayed;
+    yearsDisplay.textContent = yearsToBeDisplayed;
   }
 });
 
