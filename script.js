@@ -39,3 +39,6 @@ let currentDate;
 
 // months calculation:
 //   months = (11 - m1) + m2 +1
+
+// days calculation:
+// days = d2
