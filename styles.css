@@ -207,7 +207,7 @@ main {
 
 @media (min-width: 68.75em) {
   .age-calculator {
-    max-width: 580px;
+    max-width: 600px;
     padding: 2.5rem 2.5rem 2rem;
     border-radius: 1rem;
     border-end-end-radius: 10rem;

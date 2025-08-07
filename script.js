@@ -102,3 +102,13 @@ inputs.forEach((input) => {
     }
   });
 });
+
+monthInput.addEventListener("input", () => {
+  const monthErrorMsg = document.querySelector(".month-error");
+  if (monthInput.validity.rangeUnderflow || monthInput.validity.rangeOverflow) {
+    monthErrorMsg.classList.remove("hide");
+    monthErrorMsg.textContent = "Must be a valid month";
+  } else if (monthInput.validity.valid) {
+    monthErrorMsg.classList.add("hide");
+  }
+});
