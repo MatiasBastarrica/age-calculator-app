@@ -24,8 +24,12 @@ const yearsDisplay = document.querySelector(".years-display");
 const monthsDisplay = document.querySelector(".months-display");
 const daysDisplay = document.querySelector(".days-display");
 
-let dateSubmitted;
-let currentDate;
+const dateSubmitted = {
+  day: dayInput.value,
+  month: monthInput.value,
+  year: yearInput.value,
+};
+const currentDate = new Date();
 
 // dateSubmitted:
 // d1 = 26
