@@ -48,3 +48,18 @@ const validDays = {
   30: ["april", "june", "september", "november"],
   31: ["january", "march", "may", "july", "august", "october", "december"],
 };
+
+const months = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+];
