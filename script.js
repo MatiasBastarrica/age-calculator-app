@@ -25,11 +25,6 @@ const yearsDisplay = document.querySelector(".years-display");
 const monthsDisplay = document.querySelector(".months-display");
 const daysDisplay = document.querySelector(".days-display");
 
-const dateSubmitted = {
-  day: dayInput.value,
-  month: monthInput.value,
-  year: yearInput.value,
-};
 const currentDate = new Date();
 
 function calcYears(currentDate, dateSubmitted) {
@@ -54,9 +49,15 @@ function calcDays(currentDate, dateSubmitted) {
 }
 
 form.addEventListener("submit", (e) => {
-  calcYears();
-  calcMonths();
-  calcDays();
+  e.preventDefault();
+  const dateSubmitted = {
+    day: dayInput.value,
+    month: monthInput.value,
+    year: yearInput.value,
+  };
+  calcYears(currentDate, dateSubmitted);
+  calcMonths(currentDate, dateSubmitted);
+  calcDays(currentDate, dateSubmitted);
 });
 
 // dateSubmitted:
