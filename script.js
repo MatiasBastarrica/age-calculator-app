@@ -42,3 +42,9 @@ let currentDate;
 
 // days calculation:
 // days = d2
+
+const validDays = {
+  28: "february",
+  30: ["april", "june", "september", "november"],
+  31: ["january", "march", "may", "july", "august", "october", "december"],
+};
