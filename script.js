@@ -78,7 +78,7 @@ const months = [
   "december",
 ];
 
-const isleapYear = function (year) {
+const isLeapYear = function (year) {
   let isYearDivisibleByFour = year % 4 === 0;
   let isCentury = year % 100 === 0;
   let isYearDivisibleByFourHundred = year % 400 === 0;
@@ -90,6 +90,13 @@ const isleapYear = function (year) {
   }
 };
 
+// function clearErrorMsgs() {
+//   const errorMessages = document.querySelectorAll(".error-message");
+//   errorMessages.forEach(errorMessage => {
+//     errorMessage.textContent = "";
+//   });
+// }
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const dateSubmitted = {
@@ -97,9 +104,27 @@ form.addEventListener("submit", (e) => {
     month: monthInput.value,
     year: yearInput.value,
   };
-  calcYears(currentDate, dateSubmitted);
-  calcMonths(currentDate, dateSubmitted);
-  calcDays(currentDate, dateSubmitted);
+  const daysErrorMsg = document.querySelector(".day-error");
+
+  if (
+    months[dateSubmitted.month - 1] === "february" &&
+    isLeapYear(dateSubmitted.year) &&
+    dateSubmitted.day > 29
+  ) {
+    // clearErrorMsgs();
+    daysErrorMsg.classList.remove("hide");
+    daysErrorMsg.textContent = "Must be a valid date";
+  } else if (
+    !isLeapYear(dateSubmitted.year) &&
+    dateSubmitted.day > getMaxDay(months[dateSubmitted.month - 1])
+  ) {
+    daysErrorMsg.classList.remove("hide");
+    daysErrorMsg.textContent = "Must be a valid date";
+  } else {
+    calcYears(currentDate, dateSubmitted);
+    calcMonths(currentDate, dateSubmitted);
+    calcDays(currentDate, dateSubmitted);
+  }
 });
 
 inputs.forEach((input) => {
