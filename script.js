@@ -36,3 +36,6 @@ let currentDate;
 //    years = (y2 - y1) - 1
 //}
 //
+
+// months calculation:
+//   months = (11 - m1) + m2 +1
