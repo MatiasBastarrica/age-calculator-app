@@ -16,6 +16,10 @@
 
 */
 
+const dayInput = document.querySelector("input[name='day']");
+const monthInput = document.querySelector("input[name='month']");
+const yearInput = document.querySelector("input[name='year']");
+
 const yearsDisplay = document.querySelector(".years-display");
 const monthsDisplay = document.querySelector(".months-display");
 const daysDisplay = document.querySelector(".days-display");
