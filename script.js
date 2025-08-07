@@ -32,8 +32,14 @@ function calcMonths(currentDate, dateSubmitted, yearsToBeDisplayed) {
 }
 
 function calcDays(currentDate, dateSubmitted) {
-  const daysLeftOfTheMonth =
-    getMaxDay(months[dateSubmitted.month - 1]) - dateSubmitted.day;
+  let daysLeftOfTheMonth;
+  if (isLeapYear(dateSubmitted.year)) {
+    daysLeftOfTheMonth = 29;
+  } else {
+    daysLeftOfTheMonth =
+      getMaxDay(months[dateSubmitted.month - 1]) - dateSubmitted.day;
+  }
+
   return daysLeftOfTheMonth + currentDate.getDate();
 }
 
