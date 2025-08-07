@@ -15,3 +15,24 @@
 
 
 */
+
+let dateSubmitted;
+let currentDate;
+
+// dateSubmitted:
+// d1 = 26
+// m1 = 10
+// y1 = 2001
+
+// currentDate:
+// d2 = 6
+// m2 = 8
+// y2 = 2025
+
+// years calculation:
+// if (m1 = m2 && d1 >=d2) {
+//  years = y2 - y1;
+// }else {
+//    years = (y2 - y1) - 1
+//}
+//
