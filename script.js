@@ -15,18 +15,13 @@ function calcYears(currentDate, dateSubmitted) {
     dateSubmitted.month - 1 === currentDate.getMonth() &&
     currentDate.getDate() >= dateSubmitted.day
   ) {
-    // yearsDisplay.textContent = currentDate.getFullYear() - dateSubmitted.year;
     return currentDate.getFullYear() - dateSubmitted.year;
   } else {
-    // yearsDisplay.textContent =
-    // currentDate.getFullYear() - dateSubmitted.year - 1;
     return currentDate.getFullYear() - dateSubmitted.year - 1;
   }
 }
 
 function calcMonths(currentDate, dateSubmitted, yearsToBeDisplayed) {
-  // monthsDisplay.textContent =
-  //   12 - dateSubmitted.month + currentDate.getMonth() + 1;
   let monthsTotal = 12 - dateSubmitted.month + currentDate.getMonth() + 1;
   if (monthsTotal > 12) {
     yearsToBeDisplayed += 1;
@@ -37,7 +32,6 @@ function calcMonths(currentDate, dateSubmitted, yearsToBeDisplayed) {
 }
 
 function calcDays(currentDate, dateSubmitted) {
-  // daysDisplay.textContent = currentDate.getDate();
   const daysLeftOfTheMonth =
     getMaxDay(months[dateSubmitted.month - 1]) - dateSubmitted.day;
   return daysLeftOfTheMonth + currentDate.getDate();
@@ -110,9 +104,6 @@ form.addEventListener("submit", (e) => {
     let yearsToBeDisplayed;
     let monthToBeDisplayed;
     let daysToBeDisplayed;
-    // calcYears(currentDate, dateSubmitted);
-    // calcMonths(currentDate, dateSubmitted);
-    // calcDays(currentDate, dateSubmitted);
 
     yearsToBeDisplayed = calcYears(currentDate, dateSubmitted);
     monthToBeDisplayed = calcMonths(
