@@ -48,6 +48,14 @@ function calcDays(currentDate, dateSubmitted) {
   daysDisplay.textContent = currentDate.getDate();
 }
 
+function getMaxDay(month) {
+  for (const day in validDays) {
+    if (validDays[day].includes(month)) {
+      return day;
+    }
+  }
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const dateSubmitted = {
