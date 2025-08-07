@@ -60,30 +60,6 @@ form.addEventListener("submit", (e) => {
   calcDays(currentDate, dateSubmitted);
 });
 
-// dateSubmitted:
-// d1 = 26
-// m1 = 10
-// y1 = 2001
-
-// currentDate:
-// d2 = 6
-// m2 = 8
-// y2 = 2025
-
-// years calculation:
-// if (m1 = m2 && d1 >=d2) {
-//  years = y2 - y1;
-// }else {
-//    years = (y2 - y1) - 1
-//}
-//
-
-// months calculation:
-//   months = (11 - m1) + m2 +1
-
-// days calculation:
-// days = d2
-
 const validDays = {
   28: "february",
   30: ["april", "june", "september", "november"],
