@@ -78,6 +78,18 @@ const months = [
   "december",
 ];
 
+const isleapYear = function (year) {
+  let isYearDivisibleByFour = year % 4 === 0;
+  let isCentury = year % 100 === 0;
+  let isYearDivisibleByFourHundred = year % 400 === 0;
+
+  if ((isYearDivisibleByFour && !isCentury) || isYearDivisibleByFourHundred) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const dateSubmitted = {
