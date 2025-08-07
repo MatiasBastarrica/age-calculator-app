@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Solution](https://your-solution-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/age-calculator-app-mb-R781dtqyHT)
 - Live Site URL: [Live](https://matiasbastarrica.github.io/age-calculator-app/)
 
 ## My process
