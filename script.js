@@ -32,6 +32,33 @@ const dateSubmitted = {
 };
 const currentDate = new Date();
 
+function calcYears(currentDate, dateSubmitted) {
+  if (
+    dateSubmitted.month - 1 === currentDate.getMonth() &&
+    dateSubmitted.day >= currentDate.getDate()
+  ) {
+    yearsDisplay.textContent = currentDate.getFullYear() - dateSubmitted.year;
+  } else {
+    yearsDisplay.textContent =
+      currentDate.getFullYear() - dateSubmitted.year - 1;
+  }
+}
+
+function calcMonths(currentDate, dateSubmitted) {
+  monthsDisplay.textContent =
+    12 - dateSubmitted.month + currentDate.getMonth() + 1;
+}
+
+function calcDays(currentDate, dateSubmitted) {
+  daysDisplay.textContent = currentDate.getDate();
+}
+
+form.addEventListener("submit", (e) => {
+  calcYears();
+  calcMonths();
+  calcDays();
+});
+
 // dateSubmitted:
 // d1 = 26
 // m1 = 10
