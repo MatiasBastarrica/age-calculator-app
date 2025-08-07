@@ -76,11 +76,11 @@ input[type="number"] {
 }
 
 .error-message {
-  font-size: 0.875rem;
+  font-size: 0.685rem;
   color: var(--red-400);
   font-style: italic;
   font-weight: var(--fw-400i);
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
 }
 
 /* ### GENERAL STYLING ### */
@@ -213,7 +213,7 @@ main {
   }
 
   .grid {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .age-calculator input {
