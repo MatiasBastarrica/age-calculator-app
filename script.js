@@ -45,7 +45,7 @@ function calcMonths(currentDate, dateSubmitted) {
     12 - dateSubmitted.month + currentDate.getMonth() + 1;
 }
 
-function calcDays(currentDate, dateSubmitted) {
+function calcDays(currentDate) {
   daysDisplay.textContent = currentDate.getDate();
 }
 
