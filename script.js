@@ -90,13 +90,6 @@ const isLeapYear = function (year) {
   }
 };
 
-// function clearErrorMsgs() {
-//   const errorMessages = document.querySelectorAll(".error-message");
-//   errorMessages.forEach(errorMessage => {
-//     errorMessage.textContent = "";
-//   });
-// }
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const dateSubmitted = {
@@ -111,7 +104,6 @@ form.addEventListener("submit", (e) => {
     isLeapYear(dateSubmitted.year) &&
     dateSubmitted.day > 29
   ) {
-    // clearErrorMsgs();
     daysErrorMsg.classList.remove("hide");
     daysErrorMsg.textContent = "Must be a valid date";
   } else if (
